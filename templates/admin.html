@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Admin Dashboard</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<h1>===== ADMIN SCHOLAR TRACK =====</h1>
+
+<h2>Data Pendaftar</h2>
+
+<a href="/admin/ipk">
+Urutkan Berdasarkan IPK
+</a>
+
+<br><br>
+
+<a href="/admin/penghasilan">
+Urutkan Berdasarkan Penghasilan
+</a>
+
+<br><br>
+
+<a href="/admin/hitung-skor">
+Hitung Skor Seleksi
+</a>
+
+<br><br>
+
+<a href="/admin/kelulusan">
+Tentukan Kelulusan
+</a>
+
+<a href="/admin/laporan">
+Lihat Laporan
+</a>
+
+<hr>
+
+
+{% for mahasiswa in data %}
+
+<p>
+NIM : {{ mahasiswa[0] }} <br>
+Nama : {{ mahasiswa[1] }} <br>
+IPK : {{ mahasiswa[3] }} <br>
+Penghasilan : {{ mahasiswa[4] }} <br>
+Tanggungan : {{ mahasiswa[5] }} <br>
+Skor : {{ mahasiswa[6] }} <br>
+Status : {{ mahasiswa[7] }}
+
+</p>
+
+<hr>
+
+{% endfor %}
+
+
+</body>
+
+</html>

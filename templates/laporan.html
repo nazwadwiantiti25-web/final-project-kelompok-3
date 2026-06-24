@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Laporan Seleksi</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<h1>LAPORAN SELEKSI</h1>
+
+
+<p>Total Pendaftar:
+{{ total_pendaftar }}
+</p>
+
+<p>Total Diterima:
+{{ total_diterima }}
+</p>
+
+<p>Total Ditolak:
+{{ total_ditolak }}
+</p>
+
+<p>Rata-rata IPK:
+{{ rata_ipk }}
+</p>
+
+
+<h2>TOP 10 SKOR</h2>
+
+{% for mahasiswa in top10 %}
+
+<p>
+Nama : {{ mahasiswa[1] }} <br>
+Skor : {{ mahasiswa[6] }} <br>
+Status : {{ mahasiswa[7] }}
+</p>
+
+<hr>
+
+{% endfor %}
+
+
+</body>
+
+</html>
